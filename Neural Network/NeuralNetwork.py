@@ -1,22 +1,18 @@
 import numpy as np
 
-#Input array
 X=np.array([[1,0,1,0],[1,0,1,1],[0,1,0,1]])
 
-#Output
 y=np.array([[1],[1],[0]])
 
-#Sigmoid Function
 def sigmoid (x):
 	return 1/(1 + np.exp(-x))
 
-#Derivative of Sigmoid Function
 def derivatives_sigmoid(x):
 	return x * (1 - x)
 
 #Variable initialization
-epoch=50000 #Setting training iterations
-lr=0.1 #Setting learning rate
+epoch=50000 
+lr=5
 inputlayer_neurons = X.shape[1] #number of features in data set
 hiddenlayer_neurons = 3 #number of hidden layers neurons
 output_neurons = 1 #number of neurons at output layer
